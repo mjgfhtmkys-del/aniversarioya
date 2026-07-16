@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Aniversario 💕 - Aitor & Cristina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de bienvenida -->
+    <div id="welcome" class="screen active">
+        <div class="stars-background"></div>
+        <div class="welcome-content">
+            <h1 class="title animate-fade-in">❤️</h1>
+            <h2 class="subtitle animate-fade-in">Aitor & Cristina</h2>
+            <p class="year animate-fade-in">1 AÑO JUNTOS</p>
+            <button class="btn-start" onclick="startJourney()">Comienza la aventura ✨</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de timeline -->
+    <div id="timeline" class="screen">
+        <div class="stars-background"></div>
+        <div class="timeline-container">
+            <h1 class="timeline-title">Nuestro día especial 🗺️</h1>
+            
+            <div class="timeline">
+                <!-- Actividad 1: El Carmen -->
+                <div class="timeline-item" data-index="0">
+                    <div class="timeline-time">6:20 PM</div>
+                    <div class="timeline-content">
+                        <div class="activity-icon">🏛️</div>
+                        <h3>El Carmen</h3>
+                        <p class="activity-description">Llegada a El Carmen en Murcia</p>
+                        <div class="activity-unlock">🔒 Desbloquéate scrolleando</div>
+                    </div>
+                </div>
+
+                <!-- Actividad 2: Acuario -->
+                <div class="timeline-item" data-index="1">
+                    <div class="timeline-time">6:40 PM</div>
+                    <div class="timeline-content">
+                        <div class="activity-icon">🐠</div>
+                        <h3>Acuario de la UMU</h3>
+                        <p class="activity-description">Exploramos el mundo marino juntos</p>
+                        <p class="activity-time">⏱️ 7:15 PM Salida</p>
+                        <div class="activity-unlock">🔒 Desbloquéate scrolleando</div>
+                    </div>
+                </div>
+
+                <!-- Actividad 3: Barcas -->
+                <div class="timeline-item" data-index="2">
+                    <div class="timeline-time">7:30 PM</div>
+                    <div class="timeline-content">
+                        <div class="activity-icon">🚣</div>
+                        <h3>Barcas en el Río Segura</h3>
+                        <p class="activity-description">Navegamos bajo las estrellas</p>
+                        <p class="activity-time">⏱️ 8:00 PM Salida</p>
+                        <div class="activity-unlock">🔒 Desbloquéate scrolleando</div>
+                    </div>
+                </div>
+
+                <!-- Actividad 4: Paseo -->
+                <div class="timeline-item" data-index="3">
+                    <div class="timeline-time">8:00 PM</div>
+                    <div class="timeline-content">
+                        <div class="activity-icon">🚶</div>
+                        <h3>Paseo Romántico</h3>
+                        <p class="activity-description">Caminamos de la mano por Murcia</p>
+                        <p class="activity-time">⏱️ Hasta las 9:30 PM</p>
+                        <div class="activity-unlock">🔒 Desbloquéate scrolleando</div>
+                    </div>
+                </div>
+
+                <!-- Actividad 5: Cena -->
+                <div class="timeline-item" data-index="4">
+                    <div class="timeline-time">9:30 PM</div>
+                    <div class="timeline-content">
+                        <div class="activity-icon">🍽️</div>
+                        <h3>Cena Especial</h3>
+                        <p class="activity-description">Celebramos nuestro amor</p>
+                        <p class="activity-time">🫶🏾 El momento perfecto</p>
+                        <div class="activity-unlock">🔒 Desbloquéate scrolleando</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-letter" onclick="openLetter()">💌 Abre mi carta 💌</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de carta -->
+    <div id="letter" class="screen">
+        <div class="stars-background"></div>
+        <div class="letter-container">
+            <div class="envelope" id="envelope">
+                <div class="envelope-front">
+                    <div class="envelope-text">Para ti, mi amor 💕</div>
+                </div>
+            </div>
+            <div class="letter-content" id="letterContent">
+                <button class="btn-close" onclick="closeLetter()">✕</button>
+                <div class="letter-header">Para mi niña 🤍</div>
+                <div class="letter-body">
+                    <p>Llegamos a un año y la verdad que no me lo puedo creer de verdad. Es una alegría tenerte a mi lado y poder crecer cada día como pareja y como persona.</p>
+                    
+                    <p>Desde ese día, ese beso inesperado, esa sonrisa y esa incertidumbre, hasta hoy, que nos apoyamos en todo y nos entendemos a la perfección, ya han pasado 365 días y no puedo estar más feliz.</p>
+                    
+                    <p>Cada detalle, cada palabra desde ese día las guardo en mi corazón y espero estar contigo hasta la muerte, y si me muero, quererte aún más en el más allá.</p>
+                    
+                    <p class="letter-highlight">Mi niña, hoy es un día muy especial, y más si es contigo, mi medio coco. 🤍🫶🏾</p>
+                </div>
+                <div class="letter-signature">
+                    <p>Con todo mi amor,</p>
+                    <p><strong>Aitor</strong></p>
+                    <p style="font-size: 14px; margin-top: 20px;">Para <strong>Cristina</strong> 💕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de celebración -->
+    <div id="celebration" class="screen">
+        <div class="stars-background"></div>
+        <canvas id="confetti"></canvas>
+        <div class="celebration-content">
+            <h1 class="celebration-title animate-bounce">¡FELIZ ANIVERSARIO! 🎉</h1>
+            <p class="celebration-text">365 días de amor y muchos más por venir 💕</p>
+            <button class="btn-restart" onclick="restart()">Volver al inicio 🏠</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
